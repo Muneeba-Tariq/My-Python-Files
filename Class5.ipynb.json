@@ -1,0 +1,781 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[123, 'Bee', 'A.I']"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# list[element1, element2, element3]\n",
+    "#      0     1       2\n",
+    "l1 = [123, 'Bee', 'A.I']\n",
+    "#      -3    -2     -1\n",
+    "l1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'id': 2,\n",
+       " 'name': 'Bee',\n",
+       " 'course': 'A.I',\n",
+       " 'admission': '2019-12-15',\n",
+       " 'DOB': '01-01-2000'}"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#dic[item1, item2, item3]\n",
+    "#item = key:value\n",
+    "d1 = {'id': 2,\n",
+    "     'name' : 'Bee',\n",
+    "     'course' : 'A.I',\n",
+    "     'admission' : '2019-12-15',\n",
+    "     'DOB' : '01-01-2000'}\n",
+    "d1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'id': 1, 'name': 'Bee', 'course': 'A.I'}"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d1 = {}\n",
+    "d1['id']=1\n",
+    "d1['name']='Bee'\n",
+    "d1['course']='A.I'\n",
+    "d1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Task 1\n",
+    "# store id name and skill in dictionary with input function\n",
+    "\n",
+    "info = {}   # empty dictionary\n",
+    "user_id = input(\"Entre your id\")\n",
+    "info['id'] = user_id\n",
+    "\n",
+    "name = input(\"Entre your name\")\n",
+    "info['name'] = name\n",
+    "\n",
+    "skills = 'python' + input(\"Entre your skills with ',' seprate value\")\n",
+    "info['skills'] = skills.split()\n",
+    "\n",
+    "info"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'01-01-2000'"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# dict[key]\n",
+    "d1 = {'id': 2,\n",
+    "     'name' : 'Bee',\n",
+    "     'course' : 'A.I',\n",
+    "     'admission' : '2019-12-15',\n",
+    "     'DOB' : '01-01-2000'}\n",
+    "\n",
+    "\n",
+    "d1['DOB']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{}"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d1 = {'id': 2,\n",
+    "     'name' : 'Bee',\n",
+    "     'course' : 'A.I',\n",
+    "     'admission' : '2019-12-15',\n",
+    "     'DOB' : '01-01-2000'}\n",
+    "\n",
+    "d1.clear()\n",
+    "d1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'id': 2, 'name': 'Bee', 'course': 'A.I', 'admission': '2019-12-15', 'DOB': '01-01-2000'}\n",
+      "{'id': 5, 'name': 'Bee', 'course': 'A.I', 'admission': '2019-12-15', 'DOB': '01-01-2000'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "d1 = {'id': 2,\n",
+    "     'name' : 'Bee',\n",
+    "     'course' : 'A.I',\n",
+    "     'admission' : '2019-12-15',\n",
+    "     'DOB' : '01-01-2000'}\n",
+    "\n",
+    "d2=d1.copy() # Deep copy\n",
+    "d2[\"id\"] = 5\n",
+    "print(d1)\n",
+    "print(d2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'id': None, 'name': None, 'course': None}"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d1 = {}\n",
+    "d1['id']=None\n",
+    "d1['name']=None\n",
+    "d1['course']=None\n",
+    "d1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['id', 'name', 'course']\n",
+      "{'id': None, 'name': None, 'course': None}\n"
+     ]
+    }
+   ],
+   "source": [
+    "l1 = ['id','name','course']\n",
+    "print(l1)\n",
+    "\n",
+    "d1 = dict.fromkeys(l1)\n",
+    "print(d1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'id': 'NA', 'name': 'NA', 'course': 'NA'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "d1 = dict.fromkeys(l1,'NA')\n",
+    "print(d1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Entry comma seperated valuea,b,c\n",
+      "['a', 'b', 'c']\n"
+     ]
+    }
+   ],
+   "source": [
+    "l1 = input(\"Entry comma seperated value\")\n",
+    "l1 = l1.split(\",\")\n",
+    "print(l1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "l1 = input(\"Entry comma seperated value\")\n",
+    "l1 = l1.split(\",\")\n",
+    "print(l1)\n",
+    "\n",
+    "d1 = dict.fromkeys(l1,\"NA\")\n",
+    "print(d1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[('a', 'x'), ('b', 'y'), ('c', 'z')]\n",
+      "{'a': 'x', 'b': 'y', 'c': 'z'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "l1 = ['a','b','c']\n",
+    "l2 = ['x','y','z']\n",
+    "\n",
+    "l3 = list(zip(l1,l2))\n",
+    "print(l3)\n",
+    "\n",
+    "d1 = dict(l3)\n",
+    "print(d1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Entre namea,b,c\n",
+      "Entre value1,2,3\n",
+      "{'a': '1', 'b': '2', 'c': '3'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "l1 = input(\"Entre name\")\n",
+    "l1 = l1.split(\",\")\n",
+    "l2 = input(\"Entre value\")\n",
+    "l2 = l2.split(\",\")\n",
+    "\n",
+    "l3 = list(zip(l1,l2))\n",
+    "\n",
+    "d1 = dict(l3)\n",
+    "print(d1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'a': '1', 'b': '2', 'c': '3'}\n",
+      "1\n",
+      "None\n",
+      "value not available\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(d1)\n",
+    "print(d1.get('a'))\n",
+    "print(d1.get('s'))  #if the key is not present then the error wont be generated- thanks to get function\n",
+    "print(d1.get('h',\"value not available\"))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'a': '1', 'b': '2', 'c': '3'}\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "dict_items([('a', '1'), ('b', '2'), ('c', '3')])"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "print(d1)\n",
+    "d1.items()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'a': '1', 'b': '2', 'c': '3'}\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "dict_keys(['a', 'b', 'c'])"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "print(d1)\n",
+    "d1.keys()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'a': '1', 'b': '2', 'c': '3'}\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "dict_values(['1', '2', '3'])"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "print(d1)\n",
+    "d1.values()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'a': '1', 'b': '2', 'c': '3'}\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "'1'"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "print(d1)\n",
+    "d1.pop('a')  #value"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'b': '2', 'c': '3'}\n",
+      "('c', '3')\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(d1)\n",
+    "print(d1.popitem())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'b': '2'}\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "'2'"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "print(d1)\n",
+    "d1.setdefault('b')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'b': '2', 'xyz': None}\n",
+      "None\n",
+      "567\n",
+      "{'b': '2', 'xyz': None, 'mno': 567}\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(d1)\n",
+    "print(d1.setdefault('xyz'))\n",
+    "print(d1.setdefault('mno', 567))\n",
+    "print(d1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'a': 'AAAA', 'b': 'BB', 'c': 'CCCC'}"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d1 = {'a':'AA','b':'BB'}\n",
+    "\n",
+    "d2 = {'a':'AAAA','c':'CCCC'}\n",
+    "\n",
+    "d1.update(d2)\n",
+    "d1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "i 9\n",
+      "h 8\n",
+      "g 7\n",
+      "f 6\n",
+      "e 5\n",
+      "d 4\n",
+      "c 3\n",
+      "b 2\n",
+      "a 1\n"
+     ]
+    }
+   ],
+   "source": [
+    "d1 = {'a':1,\n",
+    "     'b':2,\n",
+    "     'c':3,\n",
+    "     'd':4,\n",
+    "     'e':5,\n",
+    "     'f':6,\n",
+    "     'g':7,\n",
+    "     'h':8,\n",
+    "     'i':9}\n",
+    "\n",
+    "for i,j in sorted(d1.items(),reverse=True):\n",
+    "    print(i,j)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'i': 9, 'h': 8, 'g': 7, 'f': 6, 'e': 5, 'd': 4, 'c': 3, 'b': 2, 'a': 1}\n"
+     ]
+    }
+   ],
+   "source": [
+    "from operator import itemgetter\n",
+    "d1 = {'a':1,\n",
+    "     'b':2,\n",
+    "     'c':3,\n",
+    "     'd':4,\n",
+    "     'e':5,\n",
+    "     'f':6,\n",
+    "     'g':7,\n",
+    "     'h':8,\n",
+    "     'i':9}\n",
+    "\n",
+    "l1 = d1.keys()\n",
+    "l2 = d1.values()\n",
+    "l3 = list(zip(l1,l2))\n",
+    "l3.sort(key=itemgetter(1),reverse=True)\n",
+    "d1 = dict(l3)\n",
+    "print(d1)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "l1 = [('A',0,'Z'),\n",
+    "     ('B',1,'Y'),\n",
+    "     ('C',3,'X')]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('A', 0, 'Z'), ('B', 1, 'Y'), ('C', 3, 'X')]"
+      ]
+     },
+     "execution_count": 38,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def abc(x):\n",
+    "    return x[0]\n",
+    "sorted(l1,key=abc)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('A', 0, 'Z'), ('B', 1, 'Y'), ('C', 3, 'X')]"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def abc(x):\n",
+    "    return x[1]\n",
+    "sorted(l1,key=abc)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'a': 1, 'c': 3, 'd': 4, 'b': 2}\n"
+     ]
+    }
+   ],
+   "source": [
+    "d1 = {'a':1,\n",
+    "     'b':2,\n",
+    "     'c':3,\n",
+    "     'd':4}\n",
+    "\n",
+    "for k,v in (sorted(d1.items(), key=lambda x:x[1], reverse=True)):\n",
+    "    d2[k]=v\n",
+    "print(d2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#list of student one info (id,name,skills)-> then l2,l3,l4...\n",
+    "#press x and all exits"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "lst=[]  #simple list to store all studend data\n",
+    "x=''  #initialize the exit comand with empty string\n",
+    "while x != 'x':\n",
+    "    dict1={}\n",
+    "    dict1['ID']=input('Enter ID: ')\n",
+    "    dict1['Name']=input('Enter Name: ')\n",
+    "    skills=input('Enter your skills')  #comma seperated skills\n",
+    "    dict1['skills']=skills.split()\n",
+    "    lst.append(dict1)  #append to lst\n",
+    "    x=input('Entre x to exit: ')  # if x\n",
+    "lst"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
